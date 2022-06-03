@@ -12,8 +12,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Класс Домоуправление со свойством <b>mainController</b>
- * Данный класс запускает приложения
+ * Класс Домоуправление со свойством <b>mainController</b>.
+ * Данный класс запускает приложения.
  * @author Автор Тюрина П.П.
  * @version 1.3
  */
