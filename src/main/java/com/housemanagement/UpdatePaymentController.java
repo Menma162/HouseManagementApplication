@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.math.RoundingMode;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.sql.*;
 import java.text.DecimalFormat;
@@ -139,7 +140,7 @@ public class UpdatePaymentController {
                 int row = statement.executeUpdate("UPDATE payment SET amount = '" + payment.getAmount() + "', " +
                         "payment_status = '" + payment.isStatus() + "', cheque = '" + payment.getCheque() + "' WHERE (id_payment = '" + payment.getId() +"');");
                 if (src!= null) {
-                    Path dst = Path.of(("src/main/resources/images/" + payment.getCheque()));
+                    Path dst = Files.createDirectories(Path.of(String.valueOf(Paths.get("./images/" + payment.getCheque()))));
                     Files.copy(src, dst, StandardCopyOption.REPLACE_EXISTING);
                 }
                 alert.setAlertType(Alert.AlertType.INFORMATION);

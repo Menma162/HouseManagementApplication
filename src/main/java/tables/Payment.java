@@ -1,9 +1,15 @@
 package tables;
 
+import com.housemanagement.HouseManagementApplication;
 import javafx.scene.control.CheckBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.io.File;
+import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 /**
  * Класс Начисление со свойствами <b>id</b>, <b>period</b>, <b>idFlat</b>, <b>numberFlat</b>,<b>idRate</b>,
  *<b>service</b>, <b>amount</b>, <b>status</b> и <b>cheque</b>.
@@ -170,7 +176,7 @@ public class Payment {
         ImageView chequeI = new ImageView();
         Image image = null;
         try {
-            image = new Image(new File("src/main/resources/images/" + cheque).toURI().toString());
+            image = new Image(String.valueOf(Paths.get("./images/" + cheque).toUri()));
         }
         catch (Exception ignored){}
         chequeI.setFitHeight(300);
