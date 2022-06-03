@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="MenuTabPane" maxHeight="741.0" maxWidth="1143.0" minHeight="741.0" minWidth="1143.0" prefHeight="741.0" prefWidth="1143.0" stylesheets="@../../css/style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.housemanagement.MainController">
+  <tabs>
+      <Tab fx:id="TabFlats" text="Квартиры">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="614.0" prefWidth="636.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Номер квартиры:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxFlats" prefWidth="150.0" visibleRowCount="1000" />
+                                    <Label fx:id="labelIdTenant" visible="false" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Лицевой счет:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelPersonalAccount" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Общая площадь:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelTotalArea" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Полезная площадь:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelUsableArea" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Номер подъезда:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelNumberEntrance" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Количество комнат:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelNumberRooms" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Количество зарегистрированных жильцов:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelResidents" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Количество собственников жилья:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelOwners" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Квартиросъемщик:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelTenant" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="589.0" prefWidth="146.0">
+                           <children>
+                              <Button fx:id="BtnAddFlat" mnemonicParsing="false" onAction="#onAddFlat" prefHeight="36.0" prefWidth="139.0" text="Добавить">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Nirmala UI" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="BtnUpdateFlat" mnemonicParsing="false" onAction="#onUpdateFlat" prefHeight="36.0" prefWidth="139.0" text="Изменить">
+                                 <font>
+                                    <Font name="Nirmala UI" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="BtnDeleteFlat" mnemonicParsing="false" onAction="#onDeleteFlat" prefHeight="36.0" prefWidth="139.0" text="Удалить">
+                                 <font>
+                                    <Font name="Nirmala UI" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label fx:id="lbListFlats" onMouseClicked="#onListFlats" prefHeight="21.0" prefWidth="91.0" text="Весь список" textFill="#2771b2" underline="true">
+                                 <font>
+                                    <Font name="Nirmala UI" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    <Tab fx:id="TabTenants" text="Квартиросъемщики">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="570.0" prefWidth="619.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Квартиросъемщик">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxTenants" prefHeight="26.0" prefWidth="366.0" visibleRowCount="1000" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="ФИО:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelFullName" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Дата регистрации:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelDateOfRegister" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Количество членов семьи:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelNumberFamilyMembers" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Номер телефона:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labeLPhoneNumber" text="-">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="125.0" prefWidth="645.0">
+                                 <children>
+                                    <Label text="Список номеров снимаемых квартир:">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxFlatsTenant" prefHeight="26.0" prefWidth="105.0" visibleRowCount="1000" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="570.0" prefWidth="146.0">
+                           <children>
+                              <Button fx:id="BtnAddTenant" mnemonicParsing="false" onAction="#onAddTenant" prefHeight="36.0" prefWidth="139.0" text="Добавить">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Nirmala UI Semilight" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="BtnUpdateTenant" mnemonicParsing="false" onAction="#onUpdateTenant" prefHeight="36.0" prefWidth="139.0" text="Изменить">
+                                 <font>
+                                    <Font name="Nirmala UI Semilight" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="BtnDeleteTenant" mnemonicParsing="false" onAction="#onDeleteTenant" prefHeight="36.0" prefWidth="139.0" text="Удалить">
+                                 <font>
+                                    <Font name="Nirmala UI Semilight" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label fx:id="lbListTenant" onMouseClicked="#onListTenants" prefHeight="21.0" prefWidth="91.0" text="Весь список" textFill="#2771b2" underline="true">
+                                 <font>
+                                    <Font name="Nirmala UI" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="30.0" top="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="TabCounters" text="Счетчики">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="570.0" prefWidth="619.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="55.0" prefWidth="938.0">
+                                 <children>
+                                    <Label layoutX="7.0" layoutY="17.0" prefHeight="21.0" prefWidth="112.0" text="ФИЛЬТРАЦИЯ" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="17.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="382.0" layoutY="18.0" prefHeight="21.0" prefWidth="107.0" text="Тип счетчика" AnchorPane.leftAnchor="382.0" AnchorPane.topAnchor="18.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxTypesCounterFilter" layoutX="489.0" layoutY="15.0" prefHeight="19.0" prefWidth="215.0" visibleRowCount="1000" AnchorPane.leftAnchor="489.0" AnchorPane.topAnchor="15.0" />
+                                    <Label layoutX="131.0" layoutY="17.0" prefHeight="21.0" prefWidth="123.0" text="Номер квартиры" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="17.0">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxFlatsCounterFilter" layoutX="261.0" layoutY="15.0" prefHeight="11.0" prefWidth="105.0" visibleRowCount="1000" AnchorPane.leftAnchor="261.0" AnchorPane.topAnchor="15.0" />
+                                    <Button layoutX="790.0" layoutY="12.0" mnemonicParsing="false" onAction="#onFilterCounters" prefHeight="31.0" prefWidth="134.0" text="Фильтровать" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="12.0">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <SplitPane dividerPositions="0.8373266078184111" prefHeight="515.0" prefWidth="795.0" VBox.vgrow="ALWAYS">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="471.0">
+                                       <children>
+                                          <TableView fx:id="tableCounters" prefHeight="204.0" prefWidth="662.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnIdCounter" prefWidth="75.0" text="C1" visible="false" />
+                                                <TableColumn fx:id="columnTypeCounter" prefWidth="207.0" text="Тип счетчика" />
+                                                <TableColumn fx:id="columnNumberCounter" prefWidth="192.0" text="Номер " />
+                                                <TableColumn fx:id="columnUsedCounter" prefWidth="296.0" text="Статус использования" />
+                                                <TableColumn fx:id="columnNumberFlatCounter" minWidth="0.0" prefWidth="0.0" text="Номер квартиры" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane maxWidth="267.0" minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="267.0">
+                                       <children>
+                                          <Button fx:id="BtnAddCounter" mnemonicParsing="false" onAction="#onAddCounter" prefHeight="36.0" prefWidth="109.0" text="Добавить" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="10.0">
+                                             <font>
+                                                <Font name="Nirmala UI" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="BtnUpdateCounter" layoutX="8.0" layoutY="53.0" mnemonicParsing="false" onAction="#onUpdateCounter" prefHeight="36.0" prefWidth="109.0" text="Изменить" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="53.0">
+                                             <font>
+                                                <Font name="Nirmala UI" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="BtnDeleteCounter" layoutX="8.0" layoutY="96.0" mnemonicParsing="false" onAction="#onDeleteCounter" prefHeight="36.0" prefWidth="109.0" text="Удалить" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="96.0">
+                                             <font>
+                                                <Font name="Nirmala UI" size="15.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="TabIndications" text="Показания">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="570.0" prefWidth="619.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="63.0" prefWidth="1143.0">
+                                 <children>
+                                    <Label layoutX="7.0" layoutY="17.0" prefHeight="21.0" prefWidth="112.0" text="ФИЛЬТРАЦИЯ" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="17.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="355.0" layoutY="17.0" prefHeight="21.0" prefWidth="107.0" text="Тип счетчика" AnchorPane.leftAnchor="355.0" AnchorPane.topAnchor="17.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxTypesCounterFilterIndication" layoutX="452.0" layoutY="15.0" prefHeight="26.0" prefWidth="162.0" visibleRowCount="1000" AnchorPane.leftAnchor="452.0" AnchorPane.topAnchor="15.0" />
+                                    <Label layoutX="127.0" layoutY="17.0" prefHeight="21.0" prefWidth="123.0" text="Номер квартиры" AnchorPane.leftAnchor="127.0" AnchorPane.topAnchor="17.0">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxFlatsFilterIndication" layoutX="244.0" layoutY="15.0" prefHeight="11.0" prefWidth="105.0" visibleRowCount="1000" AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="15.0" />
+                                    <Button layoutX="790.0" layoutY="12.0" mnemonicParsing="false" onAction="#onFilterIndication" prefHeight="31.0" prefWidth="134.0" text="Фильтровать" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="12.0">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="627.0" layoutY="17.0" prefHeight="21.0" prefWidth="57.0" text="Период:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxMonthFilterIndication" layoutX="694.0" layoutY="15.0" prefHeight="26.0" prefWidth="117.0" visibleRowCount="1000" />
+                                    <ComboBox fx:id="comboBoxYearFilterIndication" layoutX="827.0" layoutY="15.0" prefHeight="26.0" prefWidth="81.0" visibleRowCount="20" />
+                                 </children>
+                              </AnchorPane>
+                              <SplitPane dividerPositions="0.8373266078184111" prefHeight="515.0" prefWidth="795.0" VBox.vgrow="ALWAYS">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="471.0">
+                                       <children>
+                                          <TableView fx:id="tableIndications" prefHeight="204.0" prefWidth="662.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnIdIndication" prefWidth="75.0" text="C1" visible="false" />
+                                                <TableColumn fx:id="columnPeriod" prefWidth="207.0" text="Период" />
+                                                <TableColumn fx:id="columnType" prefWidth="192.0" text="Тип счетчика" />
+                                                <TableColumn fx:id="columnNumber" prefWidth="296.0" text="Номер счетчика" />
+                                                <TableColumn fx:id="columnValue" minWidth="0.0" prefWidth="0.0" text="Значение" />
+                                                <TableColumn fx:id="columnNumberFlat" minWidth="0.0" prefWidth="0.0" text="Номер квартиры" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane maxWidth="267.0" minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="267.0">
+                                       <children>
+                                          <Button fx:id="BtnAddIndication" mnemonicParsing="false" onAction="#onTransferIndication" prefHeight="36.0" prefWidth="109.0" text="Передать" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="10.0">
+                                             <font>
+                                                <Font name="Nirmala UI" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="BtnDeleteIndication" layoutX="8.0" layoutY="59.0" mnemonicParsing="false" onAction="#onDeleteIndication" prefHeight="36.0" prefWidth="109.0" text="Удалить" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="59.0">
+                                             <font>
+                                                <Font name="Nirmala UI" size="15.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="TabRatesAndNormatives" text="Тарифы и нормативы">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="570.0" prefWidth="619.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Действующие тарифы">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="204.0" prefWidth="634.0">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                                 <children>
+                                    <TableView fx:id="tableRates" prefHeight="184.0" prefWidth="318.0" HBox.hgrow="ALWAYS">
+                                       <columns>
+                                          <TableColumn fx:id="columnIdRate" prefWidth="75.0" text="C1" visible="false" />
+                                          <TableColumn fx:id="columnNameRate" prefWidth="207.0" text="Услуга" />
+                                          <TableColumn fx:id="columnValueRate" prefWidth="192.0" text="Значение" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <VBox prefHeight="184.0" prefWidth="290.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Тариф">
+                                             <VBox.margin>
+                                                <Insets bottom="35.0" left="20.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="Nirmala UI Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="114.0" prefWidth="293.0">
+                                             <children>
+                                                <Label text="Услуга:">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Nirmala UI Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="labelRateName" text="-">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Nirmala UI" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Label text="Значение">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Nirmala UI Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txtFieldValueRate" prefHeight="26.0" prefWidth="73.0">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="LabelUnitRate" text="руб">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Nirmala UI" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="BtnUpdateRate" mnemonicParsing="false" onAction="#onUpdateRate" prefHeight="36.0" prefWidth="139.0" text="Изменить">
+                                             <font>
+                                                <Font name="Nirmala UI" size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="250.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="58.0" prefWidth="795.0">
+                                 <children>
+                                    <Label text="Действующие нормативы потребления">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Nirmala UI Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="214.0" prefWidth="795.0">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                                 <children>
+                                    <TableView fx:id="tableNormative" prefHeight="125.0" prefWidth="316.0" HBox.hgrow="ALWAYS">
+                                      <columns>
+                                        <TableColumn fx:id="columnIdNormative" prefWidth="75.0" text="C1" visible="false" />
+                                        <TableColumn fx:id="columnNameNormative" prefWidth="205.0" text="Норматив" />
+                                          <TableColumn fx:id="columnValueNormative" prefWidth="194.0" text="Значение" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <VBox prefHeight="204.0" prefWidth="289.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Норматив потребления">
+                                             <VBox.margin>
+                                                <Insets bottom="35.0" left="20.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="Nirmala UI Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="114.0" prefWidth="293.0">
+                                             <children>
+                                                <Label text="Норматив:">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Nirmala UI Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="labelNormativeName" text="-">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Nirmala UI" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Label text="Значение">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Nirmala UI Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txrFieldValueNormative" prefHeight="26.0" prefWidth="73.0">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="labelUnitNormative" text="Label">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Nirmala UI" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="BtnUpdateNormative" mnemonicParsing="false" onAction="#onUpdateNormative" prefHeight="36.0" prefWidth="139.0" text="Изменить">
+                                             <font>
+                                                <Font name="Nirmala UI" size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="250.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="TabPayments" text="Начисления">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="570.0" prefWidth="619.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="63.0" prefWidth="1143.0">
+                                 <children>
+                                    <Label layoutX="7.0" layoutY="17.0" prefHeight="21.0" prefWidth="112.0" text="ФИЛЬТРАЦИЯ" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="17.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="355.0" layoutY="17.0" prefHeight="21.0" prefWidth="58.0" text="Услуга" AnchorPane.leftAnchor="355.0" AnchorPane.topAnchor="17.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxServiceFilterPayment" layoutX="413.0" layoutY="15.0" prefHeight="26.0" prefWidth="137.0" visibleRowCount="1000" AnchorPane.leftAnchor="413.0" AnchorPane.topAnchor="15.0" />
+                                    <Label layoutX="127.0" layoutY="17.0" prefHeight="21.0" prefWidth="123.0" text="Номер квартиры" AnchorPane.leftAnchor="127.0" AnchorPane.topAnchor="17.0">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxFlatsFilterPayment" layoutX="244.0" layoutY="15.0" prefHeight="11.0" prefWidth="105.0" visibleRowCount="1000" AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="15.0" />
+                                    <Button layoutX="790.0" layoutY="12.0" mnemonicParsing="false" onAction="#onFilterPayment" prefHeight="31.0" prefWidth="134.0" text="Фильтровать" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="12.0">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="560.0" layoutY="17.0" prefHeight="21.0" prefWidth="57.0" text="Период:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxMonthFilterPayment" layoutX="626.0" layoutY="15.0" prefHeight="26.0" prefWidth="117.0" visibleRowCount="1000" />
+                                    <ComboBox fx:id="comboBoxYearFilterPayment" layoutX="756.0" layoutY="15.0" maxHeight="60.0" prefHeight="26.0" prefWidth="81.0" visibleRowCount="20" />
+                                    <Label layoutX="845.0" layoutY="17.0" prefHeight="21.0" prefWidth="52.0" text="Статус:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxStatusFilterPayment" layoutX="897.0" layoutY="15.0" prefHeight="26.0" prefWidth="81.0" visibleRowCount="1000" />
+                                 </children>
+                              </AnchorPane>
+                              <SplitPane dividerPositions="0.8373266078184111" prefHeight="515.0" prefWidth="795.0" VBox.vgrow="ALWAYS">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="471.0">
+                                       <children>
+                                          <TableView fx:id="tablePayments" prefHeight="642.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnIdPayment" prefWidth="75.0" text="C1" visible="false" />
+                                                <TableColumn fx:id="columnPeriodPayment" prefWidth="207.0" text="Период" />
+                                                <TableColumn fx:id="columnService" prefWidth="192.0" text="Услуга" />
+                                                <TableColumn fx:id="columnNumberFlatPayment" prefWidth="296.0" text="Номер квартиры" />
+                                                <TableColumn fx:id="columnAmount" minWidth="0.0" prefWidth="0.0" text="Сумма" />
+                                                <TableColumn fx:id="columnStatusPayment" minWidth="0.0" prefWidth="0.0" text="Статус оплаты" />
+                                                <TableColumn fx:id="columnCheque" minWidth="0.0" prefWidth="0.0" text="Чек" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="642.0" prefWidth="40.0" SplitPane.resizableWithParent="false">
+                                       <children>
+                                          <Button fx:id="BtnAddPayments" layoutX="8.0" layoutY="87.0" mnemonicParsing="false" onAction="#onAddPayments" prefHeight="36.0" prefWidth="109.0" text="Начислить" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="87.0">
+                                             <font>
+                                                <Font name="Nirmala UI" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="BtnUpdatePayment" layoutX="8.0" layoutY="137.0" mnemonicParsing="false" onAction="#onUpdatePayment" prefHeight="36.0" prefWidth="109.0" text="Изменить" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="137.0">
+                                             <font>
+                                                <Font name="Nirmala UI" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <ComboBox fx:id="comboBoxMonth" layoutX="10.0" layoutY="49.0" prefHeight="26.0" prefWidth="130.0" visibleRowCount="1000" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="50.0" />
+                                          <ComboBox fx:id="comboBoxYear" layoutX="9.0" layoutY="14.0" prefHeight="26.0" prefWidth="86.0" visibleRowCount="20" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="14.0" />
+                                          <Button layoutX="8.0" layoutY="185.0" mnemonicParsing="false" onAction="#onOpenCheque" prefHeight="36.0" prefWidth="133.0" text="Открыть чек" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="185.0">
+                                             <font>
+                                                <Font name="Nirmala UI" size="15.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

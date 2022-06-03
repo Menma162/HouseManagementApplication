@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="747.0" maxWidth="967.0" minHeight="747.0" minWidth="967.0" prefHeight="747.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.housemanagement.ImageController">
+   <children>
+      <ImageView fx:id="image" fitHeight="747.0" fitWidth="967.0" nodeOrientation="INHERIT" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

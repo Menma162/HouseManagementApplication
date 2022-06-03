@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="758.0" maxWidth="1219.0" minHeight="346.0" minWidth="593.0" prefHeight="758.0" prefWidth="1219.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.housemanagement.ListFlatsController">
+   <children>
+      <Label alignment="CENTER" text="Список квартир" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <TableView fx:id="tableFlats" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="columnIdFlat" prefWidth="75.0" text="C1" visible="false" />
+          <TableColumn fx:id="columnFlatNumber" prefWidth="75.0" text="Номер квартиры" />
+            <TableColumn fx:id="columnPersonalAccount" prefWidth="75.0" text="Лицевой счет" />
+            <TableColumn fx:id="columnTotalArea" prefWidth="75.0" text="Общая площадь" />
+            <TableColumn fx:id="columnUsableArea" prefWidth="75.0" text="Полезная площадь" />
+            <TableColumn fx:id="columnNumberEntrance" prefWidth="75.0" text="Номер подъезда" />
+            <TableColumn fx:id="columnNumberOfRooms" prefWidth="75.0" text="Количество комнат" />
+            <TableColumn fx:id="columnNumberOfResidence" prefWidth="75.0" text="Количество зарегистрированных жильцов" />
+            <TableColumn fx:id="columnNumberOwners" prefWidth="75.0" text="Количество собственников жилья" />
+            <TableColumn fx:id="columnFullNameTenant" prefWidth="75.0" text="Квартиросъемщик" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</VBox>
