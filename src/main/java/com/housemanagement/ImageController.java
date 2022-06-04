@@ -5,6 +5,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 /**
  * Класс Изображения со свойством <b>image</b>.
  * <p>
@@ -20,8 +23,8 @@ public class ImageController {
      * Функция загрузки изображения
      * @param file файл изображения
      */
-    public void fill (File file){
-        Image imageFile = new Image(file.toURI().toString());
+    public void fill (String path){
+        Image imageFile = new Image(path);
         image.setFitHeight(747);
         image.setFitWidth(967);
         image.setImage(imageFile);

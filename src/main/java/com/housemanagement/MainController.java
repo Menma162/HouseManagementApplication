@@ -22,6 +22,7 @@ import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.nio.file.Paths;
 import java.sql.*;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -1650,8 +1651,8 @@ public class MainController {
         FXMLLoader fxmlLoader = new FXMLLoader(HouseManagementApplication.class.getResource("image.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         ImageController controller = fxmlLoader.getController();
-        File file = new File("src/main/resources/images/" + tablePayments.getSelectionModel().selectedItemProperty().getValue().getCheque());
-        controller.fill(file);
+        String path = String.valueOf((Paths.get("./images/" + tablePayments.getSelectionModel().selectedItemProperty().getValue().getCheque())).toUri());
+        controller.fill(path);
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(new Scene(root));
